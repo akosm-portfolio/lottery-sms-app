@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Online Lottery Sender</string>
+    <string name="title_activity_show">Show</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First fragment</string>
+    <string name="second_fragment_label">Second fragment</string>
+    <string name="number_pick_intent_label">Pick your number</string>
+    <string name="prize_claim_intent_label">Prize claim</string>
+    <string name="success_ticket_intent_label">Successfully sent</string>
+    <string name="back">Back</string>
+    <string name="sms_destination_number" translatable="false">1756</string>
+    <string name="url_scratch_card" translatable="false">"https://bet.szerencsejatek.hu/e-sorsjegy"</string>
+    <!-- Strings used for messages on screen-->
+    <string name="shake_detected">Shake detected</string>
+    <string name="notify_to_shake">Shake your phone to display random winning numbers.</string>
+    <string name="and">and</string> és
+    <string name="allowed_range">Allowed range</string>
+    <string name="length_error_msg">You need to give %d numbers separated by commas</string>
+    <string name="comma_error_msg">Numbers should be separated by commas</string>
+    <string name="unknown_error">Unknown error! Try it later.</string>
+    <string name="failed_to_send">Failed to send text message</string>
+    <string name="incorrect_data">Incorrect data was given</string>
+    <string name="successful_send">Message was sent successfully</string>
+    <!-- Strings used for layout components on screen-->
+    <string name="select_lottery_type">Select lottery type</string>
+    <string name="lottery_5" translatable="false">Ötöslottó</string>
+    <string name="lottery_6" translatable="false">Hatoslottó</string>
+    <string name="lottery_7" translatable="false">Skandináv lottó</string>
+    <string name="scratch_card">Scratch cards</string>
+    <string name="claim_prize">Claim your prize</string>
+    <string name="reference_data">Reference data</string>
+    <string name="send">send</string>
+    <string name="give_reference_data">Give your information to claim your prize:</string>
+    <string name="name">Name</string>
+    <string name="bank_account_number">Bank account number</string>
+    <string name="success">Success!</string>
+    <string name="after_success_send_msg">Your lottery ticket was successfully sent!\n To fill out another ticket use the HOME button.</string>
+    <string name="exit">home</string>
+    <string name="lottery_type">Lottery type</string>
+    <string name="winning_numbers">Your winning numbers:</string>
+    <string name="numbers">Numbers</string>
+    <string name="random_numbers">Shake your phone for quick game with random numbers!</string>
+    <string name="modify">modify</string>
+    <string name="language">en</string>
+</resources>

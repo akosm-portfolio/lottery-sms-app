@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Online Lottó</string>
+    <string name="title_activity_show">Mutat</string>
+    <string name="first_fragment_label">Első oldal</string>
+    <string name="second_fragment_label">Második oldal</string>
+    <string name="back">Vissza</string>
+    <string name="shake_detected">Rázás érzékelve</string>
+    <string name="notify_to_shake">Nyerőszámok megjelenítéséhez rázd meg a telefont!</string>
+    <string name="and">és</string>
+    <string name="allowed_range">Engedélyezett tartomány</string>
+    <string name="length_error_msg">%d darab számot kell megadnod vesszővel elválasztva</string>
+    <string name="comma_error_msg">A számokat vesszővel elválasztva kell megadni</string>
+    <string name="unknown_error">Ismeretlen hiba! Próbálja meg később</string>
+    <string name="failed_to_send">Küldés sikertelen</string>
+    <string name="incorrect_data">Helytelen adatok</string>
+    <string name="successful_send">Sikeres küldés</string>
+    <string name="select_lottery_type">Játék típusa:</string>
+    <string name="scratch_card">Sorsjegyek</string>
+    <string name="claim_prize">Nyereményfelvétel</string>
+    <string name="reference_data">Utalási adatok</string>
+    <string name="send">elküldés</string>
+    <string name="give_reference_data">Nyereményed átutalásához szükséges adatok:</string>
+    <string name="name">Név</string>
+    <string name="bank_account_number">Bankszámlaszám</string>
+    <string name="success">Sikerült!</string>
+    <string name="after_success_send_msg">Az SMS elküldése sikeres volt. Újabb szelvény feladásához használd a KILÉPÉS gombot!</string>
+    <string name="exit">kilépés</string>
+    <string name="lottery_type">Játék típusa</string>
+    <string name="winning_numbers">Nyerőszámok</string>
+    <string name="numbers">Számok</string>
+    <string name="random_numbers">Gyorstipphez rázd meg a telefont!</string>
+    <string name="modify">módosít</string>
+    <string name="language">hu</string>
+    <string name="prize_claim_intent_label">Nyerményátvétel</string>
+    <string name="success_ticket_intent_label">Szelvény feladva</string>
+    <string name="number_pick_intent_label">Feladás</string>
+</resources>
