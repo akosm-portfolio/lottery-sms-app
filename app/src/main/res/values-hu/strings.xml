@@ -35,4 +35,5 @@
     <string name="prize_claim_intent_label">Nyerményátvétel</string>
     <string name="success_ticket_intent_label">Szelvény feladva</string>
     <string name="number_pick_intent_label">Feladás</string>
+    <string name="same_number_twice">Ugyanaz a szám nem használható többször</string>
 </resources>

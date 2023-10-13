@@ -30,7 +30,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Set;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class NumberPickActivity extends AppCompatActivity
         implements SensorEventListener {
@@ -40,7 +43,6 @@ public class NumberPickActivity extends AppCompatActivity
 
 
     private TextView lotteryNameTv;
-    private TextView numbersHeadTv;
     private TextView errorMsgTv;
     private EditText numbersEditText;
     private Button modifyButton;
@@ -65,19 +67,20 @@ public class NumberPickActivity extends AppCompatActivity
         LotteryButtonName = getIntent().getStringExtra("LOTTERY_NAME");
 
         lotteryNameTv = findViewById(R.id.lottery_name_tv);
-        numbersHeadTv = findViewById(R.id.numbersHeadTv);
         errorMsgTv = findViewById(R.id.errorMsgTv);
         //numbersHeadTv.setVisibility(View.INVISIBLE);
         numbersEditText = findViewById(R.id.editText_numbers);
         modifyButton = (Button) findViewById(R.id.modify_btn);
         modifyButton.setEnabled(false);
+
         lotteryTypeInt = getFieldNumber(LotteryButtonName);
+        lotteryNameTv.setText(LotteryButtonName);
+        min = getMinMax(lotteryTypeInt)[0];
+        max = getMinMax(lotteryTypeInt)[1];
         //numbersEditText.setVisibility(View.INVISIBLE);
 
         mSensorMgr = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         vibratorService = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-        lotteryNameTv.setText(LotteryButtonName);
 
         Sensor accelerometer = mSensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (accelerometer != null) {
@@ -106,8 +109,6 @@ public class NumberPickActivity extends AppCompatActivity
                     StringJoiner sj = new StringJoiner(",");
 
                     for (int i = 0; i < lotteryTypeInt; i++) {
-                        min = getMinMax(lotteryTypeInt)[0];
-                        max = getMinMax(lotteryTypeInt)[1];
                         int random = (int) (Math.random() * (max - min + 1) + min);
                         if (numbersIntList.isEmpty()) {
                             random = (int) (Math.random() * (max - min + 1) + min);
@@ -133,7 +134,6 @@ public class NumberPickActivity extends AppCompatActivity
                 }
             }
         }
-
     }
 
     @Override
@@ -179,20 +179,27 @@ public class NumberPickActivity extends AppCompatActivity
             errorMsgTv.setText(String.format(getResources().getString(R.string.length_error_msg), lotteryTypeInt));
             accept = false;
         } else {
-            for (int i = 0; i < numbersStringArray.length; i++) {
-                try {
-                    int nextNum = Integer.parseInt(numbersStringArray[i]);
-                    if (nextNum < min || nextNum > max) {
-                        errorMsgTv.setText(String.format("%s: %d  %d", R.string.allowed_range, min, max));
+            Set<String> numbersStringSet = Arrays.stream(numbersStringArray).collect(Collectors.toSet());
+            if(numbersStringArray.length == numbersStringSet.size()){
+                for (String s : numbersStringArray) {
+                    try {
+                        int nextNum = Integer.parseInt(s);
+                        if (nextNum < min || nextNum > max) {
+                            errorMsgTv.setText(String.format("%s: %d-%d", getResources().getString(R.string.allowed_range), min, max));
+                            accept = false;
+                        } else {
+                            accept = true;
+                        }
+                    } catch (Exception e) {
+                        errorMsgTv.setText(R.string.comma_error_msg);
                         accept = false;
-                    } else {
-                        accept = true;
                     }
-                } catch (Exception e) {
-                    errorMsgTv.setText(R.string.comma_error_msg);
-                    accept = false;
                 }
+            }else{
+                accept = false;
+                errorMsgTv.setText(R.string.same_number_twice);
             }
+
         }
 
         if (accept) {

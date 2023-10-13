@@ -21,6 +21,7 @@
     <string name="failed_to_send">Failed to send text message</string>
     <string name="incorrect_data">Incorrect data was given</string>
     <string name="successful_send">Message was sent successfully</string>
+    <string name="same_number_twice">Can\'t use the same number more than one time</string>
     <!-- Strings used for layout components on screen-->
     <string name="select_lottery_type">Select lottery type</string>
     <string name="lottery_5" translatable="false">Ötöslottó</string>
