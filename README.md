@@ -25,4 +25,5 @@ This message is decoded by the official gambling company in Hungary. More info a
 More Screenshots: [https://1drv.ms/fs!Ar4ENAXh3Te-gc8YHXNZ1btryLXJeQ?e=hXvZaS](https://1drv.ms/f/s!Ar4ENAXh3Te-gc8asOWMbMtubSNoQw?e=WdagSg)
 
 ## Demo
-https://github.com/akosm-portfolio/lottery-sms-app/assets/147773177/4c91160f-dcdb-4b1b-b5ba-e4bee13568ee
+https://github.com/akosm-portfolio/lottery-sms-app/assets/147773177/adac32ff-b7c6-40ba-bd9d-f20c51a9b9a6
+
